@@ -66,10 +66,18 @@
     </dependencies>
 
     <build>
-    <plugins>
+        <plugins>
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
+                <version>3.2.1</version> <!-- replace with your version -->
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>repackage</goal>
+                        </goals>
+                    </execution>
+                </executions>
                 <configuration>
                     <excludes>
                         <exclude>
@@ -81,5 +89,6 @@
             </plugin>
         </plugins>
     </build>
+
 
 </project>
