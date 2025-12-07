@@ -1,0 +1,9 @@
+# Étape 1 : image de base
+FROM eclipse-temurin:17-jdk-alpine
+
+# Étape 2 : ajouter le jar
+ARG JAR_FILE=target/*.jar
+COPY ${JAR_FILE} app.jar
+
+# Étape 3 : lancement
+ENTRYPOINT ["java","-jar","/app.jar"]
